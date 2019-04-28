@@ -7,15 +7,15 @@ the existing `<mat-checkbox>`. This component is experimental and should not be 
 Assuming your application is already up and running using Angular Material, you can add this
 component by following these steps:
 
-1. Install Angular Material Experimental & MDC WEB: 
+1. Install Angular Material Experimental & MDC WEB:
 
    ```bash
    npm i material-components-web @angular/material-experimental
    ```
-   
+
 2. In your `angular.json`, make sure `node_modules/` is listed as a Sass include path. This is
    needed for the Sass compiler to be able to find the MDC Web Sass files.
-  
+
    ```json
    ...
    "styles": [
@@ -34,24 +34,24 @@ component by following these steps:
 
    ```ts
    import {MatCheckboxModule} from '@angular/material-experimental/mdc-checkbox';
-   
+
    @NgModule({
      declarations: [MyComponent],
      imports: [MatCheckboxModule],
    })
    export class MyModule {}
    ```
-   
+
 4. Add use `<mat-checkbox>` in your component's template, just like you would the normal
    `<mat-checkbox>`:
 
    ```html
    <mat-checkbox [checked]="isChecked">Check me</mat-checkbox>
    ```
-   
+
 5. Add the theme and typography mixins to your Sass. (There is currently no pre-built CSS option for
    the experimental `<mat-checkbox>`):
-   
+
    ```scss
    @import '~@angular/material/theming';
    @import '~@angular/material-experimental/mdc-checkbox';
@@ -61,13 +61,13 @@ component by following these steps:
    $my-theme:   mat-light-theme($my-primary, $my-accent);
 
    @include mat-checkbox-theme-mdc($my-theme);
-   @include mat-checkbox-typography-mdc();
+  @include mat-checkbox-typography-mdc();
    ```
 
 ## API differences
 The experimental checkbox API closely matches the
 [API of the standard checkbox](https://material.angular.io/components/checkbox/api).
-`@angular/material-experimental/mdc-checkox` exports symbols with the same name and public interface
+`@angular/material-experimental/mdc-checkbox` exports symbols with the same name and public interface
 as all of the symbols found under `@angular/material/checkbox`, except for the following
 differences:
 
